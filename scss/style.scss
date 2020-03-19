@@ -135,6 +135,7 @@ body {
   // .slide-menu__description
   &__description {
     padding: 0 15px;
+    margin-bottom: 20px;
     // flex-shrink: 0;
   }
   // .slide-menu__text
@@ -142,10 +143,18 @@ body {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
-    color: $font-description;
+    color: font-text;
   }
   // .slide-menu__more-btn
   &__more-btn {
+    margin-left: 48px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    text-decoration: none !important ;
+    color: $font-text !important ;
   }
   // .slide-menu__img-box
   &__img-box {
