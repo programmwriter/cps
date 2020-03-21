@@ -1,5 +1,8 @@
 @import "../fonts/_fonts";
 @import "_colors";
+$sm: 500px;
+$md: 768px;
+$lg: 1120px;
 
 body {
   font-family: "TT Lakes";
@@ -8,12 +11,15 @@ body {
 }
 
 .container {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
-  height: 1200px;
-  width: 320px;
-  margin: 0 auto;
+  height: auto;
+  width: 100%px;
+  min-width: 320px;
+  max-width: 1120px;
+  height: 100%;
+  @media screen and (min-width: $lg) {
+    margin: 0 auto;
+    height: auto;
+  }
   background: $bg-gray;
 }
 .upper-menu {
@@ -52,41 +58,52 @@ body {
     height: 32px;
     width: 2px;
     background: #eaeaea;
+    @media screen and (min-width: $lg) {
+      display: none;
+    }
   }
 }
 .btn-link {
-  // .btn-link__img
-  &__img {
+  display: flex;
+  text-decoration: none !important;
+  &--hidden {
+    display: none;
+
+    @media screen and (max-width: $lg) and (min-width: $sm) {
+      display: block;
+    }
+  }
+  &__title {
+    display: none;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: $font-text !important;
+    margin-right: 10px;
+    @media screen and (min-width: $lg) {
+      display: block;
+    }
   }
 }
-.logo {
-}
-.img {
-}
-
 .title {
   border-left: 4px solid $faux-turquoise;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   box-sizing: border-box;
 
-  // height: 40px;
-  // margin-left: 15px;
   // .tile__box
   &__box {
-    // border-left: 3px solid $faux-turquoise;
     width: 300px;
     margin: 25px 0;
-    // overflow: hidden;
-    // border-top: 3px solid white;
-    // border-bottom: 3px solid white;
   }
   // .title__text
   &__text {
     margin: 0;
     text-indent: 15px;
     font-size: 28px;
-    // line-height: 40px;
     letter-spacing: -0.6px;
 
     color: #1b1c21;
@@ -98,15 +115,19 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   overflow: hidden;
+  // max-width: 1300px;
 
   // .slide-menu__items
   &__items {
-    // display: inline-block;
-    // height: 40px;
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0;
     padding: 0 15px;
+    @media screen and (min-width: $lg) {
+      max-width: 1120px;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   // .slide-menu__item
 
@@ -125,6 +146,7 @@ body {
     padding: 8px 15px;
     list-style: none;
     display: inline-block;
+    cursor: pointer;
   }
   // .slide-menu__content
   &__content {
@@ -134,32 +156,79 @@ body {
   }
   // .slide-menu__description
   &__description {
+    position: relative;
     padding: 0 15px;
-    margin-bottom: 20px;
-    // flex-shrink: 0;
+    width: auto;
+
+    background: $turquoise;
+    overflow: hidden;
+    max-width: 312px;
+
+    @media screen and (max-width: $md) {
+      max-height: 90px;
+    }
+    @media screen and (max-width: $lg) and (min-width: $sm) {
+      max-height: 160px;
+    }
+    @media screen and (min-width: $lg) {
+      max-width: 500px;
+      height: auto;
+    }
   }
   // .slide-menu__text
   &__text {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
-    color: font-text;
+    color: $font-text;
+    margin: 0;
+    overflow: hidden;
+    z-index: 9;
   }
   // .slide-menu__more-btn
   &__more-btn {
-    margin-left: 48px;
-    margin-bottom: 10px;
+    position: absolute;
+    bottom: -20px;
+    margin-left: 35px;
+    display: block;
+    visibility: visible;
+    overflow: visible;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     letter-spacing: -0.2px;
     text-decoration: none !important ;
     color: $font-text !important ;
+    z-index: 10;
   }
-  // .slide-menu__img-box
-  &__img-box {
+  // .slide-menu__more-btn::before
+  &__more-btn::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 6px;
+    background-image: url("../img/icon.svg");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 11px;
   }
   // .slide-menu__img
+
   &__img {
+    border: 1px solid green;
+    box-sizing: border-box;
+    border-radius: 2px;
+    // margin: 30px 10px;
+    // margin-top: 10px;
+    margin-left: 35px;
+    @media screen and (max-width: $lg) and (min-width: $sm) {
+      height: 260px;
+      width: 360px;
+    }
+    @media screen and (min-width: $lg) {
+      height: 300px;
+      width: 530px;
+    }
   }
 }
