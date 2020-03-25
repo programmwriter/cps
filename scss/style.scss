@@ -8,6 +8,7 @@ body {
   font-family: "TT Lakes";
   color: #1b1c21;
   background: #f2f2f2;
+  margin: 0;
 }
 
 .container {
@@ -53,19 +54,28 @@ body {
     justify-content: center;
     align-items: center;
   }
-  // .upper-menu__delimetr
-  &__delimetr {
-    height: 32px;
-    width: 2px;
-    background: #eaeaea;
-    @media screen and (min-width: $lg) {
-      display: none;
-    }
+}
+
+// delimeter
+.delimeter {
+  height: 32px;
+  width: 2px;
+  background: #eaeaea;
+  @media screen and (min-width: $lg) {
+    display: none;
   }
 }
+
+//btn-link
 .btn-link {
   display: flex;
+  align-items: center;
   text-decoration: none !important;
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  //btn-link--hidden
   &--hidden {
     display: none;
 
@@ -73,6 +83,7 @@ body {
       display: block;
     }
   }
+  //btn-link__title
   &__title {
     display: none;
     font-family: TT Lakes;
@@ -87,7 +98,12 @@ body {
       display: block;
     }
   }
+  //btn-link__title:hover
+  &__title:hover {
+    text-decoration: underline;
+  }
 }
+//title
 .title {
   border-left: 4px solid $faux-turquoise;
   border-top: 3px solid transparent;
@@ -110,6 +126,7 @@ body {
     font-weight: bold;
   }
 }
+//slide-menu
 .slide-menu {
   display: flex;
   justify-content: flex-start;
@@ -128,24 +145,32 @@ body {
       flex-wrap: wrap;
     }
   }
-  // .slide-menu__item
+  // .slide-menu__item--active
 
-  &__item_active {
+  &__item--active {
     background: white;
 
     border-radius: 5px;
     border: 2px solid $turquoise;
     box-sizing: border-box;
   }
+  // .slide-menu__item
   &__item {
     margin-right: 5px;
     height: 40px;
-    font-weight: 500;
-    color: $font_gray;
     padding: 8px 15px;
     list-style: none;
     display: inline-block;
-    cursor: pointer;
+  }
+  // .slide-menu__anchor
+  &__anchor {
+    text-decoration: none !important ;
+    font-weight: 500;
+    color: $font_gray;
+  }
+  &__anchor:hover {
+    text-decoration: underline !important;
+    color: darken($font_gray, 20%);
   }
   // .slide-menu__content
   &__content {
@@ -201,6 +226,10 @@ body {
   // .slide-menu__more-btn
   &__more-btn {
     position: relative;
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
     margin: 10px 0 10px 35px;
 
     display: block;
@@ -211,6 +240,11 @@ body {
     text-decoration: none !important ;
     color: $font-text !important ;
     z-index: 10;
+  }
+  // .slide-menu__more-btn:hover
+  &__more-btn:hover {
+    text-decoration: underline !important ;
+    cursor: pointer;
   }
   // .slide-menu__more-btn::before
   &__more-btn::before {

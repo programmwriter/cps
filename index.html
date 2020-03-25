@@ -4,63 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>CPS</title>
   </head>
   <body>
     <section class="container">
       <section class="upper-menu">
         <div class="upper-menu__left-part">
           <div class="upper-menu__item">
-            <a href="#" class="btn-link">
+            <button class="btn-link">
               <img src="img/burger.svg" alt="" class="btn-link__img" />
-            </a>
+            </button>
           </div>
           <div class="upper-menu__item">
-            <img src="img/Group.svg" alt="logo" class="logo" />
+            <a href="#" class="upper-menu__home-link"
+              ><img src="img/Group.svg" alt="logo" class="logo"
+            /></a>
           </div>
         </div>
         <div class="upper-menu__right-part">
           <div class="upper-menu__item">
-            <a href="#" class="btn-link">
-              <img
-                src="img/call.svg"
-                alt=""
-                class="btn-link__img btn-link--hidden"
-              />
-            </a>
+            <button class="btn-link btn-link--hidden">
+              <img src="img/call.svg" alt="" class="btn-link__img " />
+            </button>
           </div>
           <div class="upper-menu__item">
-            <a href="#" class="btn-link">
-              <img
-                src="img/chat.svg"
-                alt=""
-                class="btn-link__img btn-link--hidden"
-              />
-            </a>
+            <button class="btn-link btn-link--hidden">
+              <img src="img/chat.svg" alt="" class="btn-link__img " />
+            </button>
           </div>
           <div class="upper-menu__item">
-            <a href="#" class="btn-link">
-              <img
-                src="img/profile.svg"
-                alt=""
-                class="btn-link__img btn-link--hidden"
-              />
-            </a>
+            <button class="btn-link btn-link--hidden">
+              <img src="img/profile.svg" alt="" class="btn-link__img " />
+            </button>
           </div>
           <div class="upper-menu__item">
-            <div class="upper-menu__delimetr"></div>
+            <div class="delimeter"></div>
           </div>
           <div class="upper-menu__item">
-            <a href="#" class="btn-link">
+            <button class="btn-link">
               <p class="btn-link__title">Оставить заявку</p>
               <img src="img/repair.svg" alt="" class="btn-link__img" />
-            </a>
+            </button>
           </div>
           <div class="upper-menu__item">
-            <a href="#" class="btn-link">
+            <button class="btn-link">
               <p class="btn-link__title">Статус ремонта</p>
               <img src="img/checkstatus.svg" alt="" class="btn-link__img" />
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -71,14 +61,24 @@
       </div>
       <div class="slide-menu">
         <ul class="slide-menu__items">
-          <li class="slide-menu__item slide-menu__item_active">
-            Ремонтируемые устройства
+          <li class="slide-menu__item slide-menu__item--active">
+            <a class="slide-menu__anchor" href="#">Ремонтируемые устройства</a>
           </li>
-          <li class="slide-menu__item">Дополнительные услуги</li>
-          <li class="slide-menu__item">Цены на услуги</li>
-          <li class="slide-menu__item">Адерса сервисных центров</li>
-          <li class="slide-menu__item">Специальные цены</li>
-          <li class="slide-menu__item">Взносы</li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__anchor" href="#">Дополнительные услуги</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__anchor" href="#">Цены на услуги</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__anchor" href="#">Адерса сервисных центров</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__anchor" href="#">Специальные цены</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__anchor" href="#">Взносы</a>
+          </li>
         </ul>
         <div class="slide-menu__content">
           <div class="slide-menu__description">
@@ -96,12 +96,11 @@
                 очередь, советуют нас родным и близким.</span
               >
             </p>
-            <a href="#" class="slide-menu__more-btn">Читать далее</a>
-            <!-- <a href="#" class="slide-menu__more-btn11">Читать далее</a> -->
+            <button class="slide-menu__more-btn">Читать далее</button>
           </div>
           <!-- <div class="slide-menu__img"> -->
           <img
-            src="img/_MG_3223.png"
+            src="img/repair.png"
             alt="Вывеска при входе"
             class="slide-menu__img"
           />
