@@ -122,6 +122,11 @@ body {
   }
 }
 
+.upper-menu__home-link:hover .logo {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
 .delimeter {
   height: 32px;
   width: 2px;
