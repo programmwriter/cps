@@ -1,5 +1,6 @@
 @import "../fonts/_fonts";
 @import "_colors";
+@import "../components/mobile-menu/scss/mobile-menu";
 $sm: 500px;
 $md: 768px;
 $lg: 1119px;
@@ -12,6 +13,7 @@ body {
 }
 // .container
 .container {
+  position: relative;
   height: auto;
   width: 100%px;
   min-width: 320px;
