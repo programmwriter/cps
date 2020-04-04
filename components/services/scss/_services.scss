@@ -1,0 +1,101 @@
+// todo создать переменную для margin на разные media
+$margin-left: 24px;
+.brends {
+  // height: 322px;
+  // width: 1121px;
+  max-width: 1120;
+  min-width: 320px;
+  background: $bg-gray;
+
+  // .brends__content
+  &__content {
+    margin-left: $margin-left;
+  }
+  // .brends__title
+  &__title {
+    height: auto;
+    width: auto;
+    margin-left: -$margin-left;
+    background: linear-gradient(270deg, $bg-gray 0%, #ffffff 98.61%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    padding: 16px 0 16px 24px;
+
+    // .brends__title__text
+    &__text {
+      margin: 0;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      color: $font_gray;
+      margin-right: $margin-left;
+    }
+  }
+  //todo выровнять по правому краю
+  // .brends__items
+  &__items {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  // .brends__item
+  &__item {
+    list-style: none;
+  }
+  // .brends__item--hidden
+  &__item--hidden {
+    display: none;
+  }
+}
+// brend-slide
+.brend-slide {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 72px;
+  width: 224px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-right: 32px;
+  margin-top: 16px;
+  padding-left: 16px;
+
+  // brend-slide__item-box
+  &__btn-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 16px;
+  }
+  // brend-slide__btn-link
+  &__btn-link {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #ff3e79;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  // brend-slide__btn-link::before
+  &__btn-link::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 12px;
+    top: 12px;
+    border-top: 3px solid #ff3e79;
+    border-right: 3px solid #ff3e79;
+    transform: rotate(45deg);
+  }
+  // brend-slide_img
+  &__img {
+  }
+}

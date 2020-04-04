@@ -1,6 +1,7 @@
 @import "../fonts/_fonts";
 @import "_colors";
-@import "../components/mobile-menu/scss/mobile-menu";
+@import "../components/side-menu/scss/side-menu";
+@import "../components/services/scss/services";
 $sm: 500px;
 $md: 768px;
 $lg: 1119px;
@@ -71,14 +72,14 @@ body {
   }
 }
 //.contact-icons
-.contact-icons{
+.contact-icons {
   display: flex;
   //.contact-icons__icon
-  &__icon{
+  &__icon {
     margin-right: 16px;
   }
   //.contact-icons__icon:last-child
-  &__icon:last-child{
+  &__icon:last-child {
     margin-right: 0;
   }
 }
@@ -155,6 +156,7 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   overflow: hidden;
+  margin-bottom: 16px;
 
   // .slide-menu__items
   &__items {
@@ -246,46 +248,8 @@ body {
       display: inline;
     }
   }
-  // .slide-menu__more-btn
-  &__more-btn {
-    position: relative;
-    padding: 0;
-    border: none;
-    font: inherit;
-    background-color: transparent;
-    margin: 10px 0 10px 35px;
 
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    text-decoration: none !important ;
-    color: $font-text !important ;
-    z-index: 10;
-  }
-  // .slide-menu__more-btn:hover
-  &__more-btn:hover {
-    text-decoration: underline !important ;
-    cursor: pointer;
-  }
-  &__more-btn:hover::before {
-    filter: brightness(0.8);
-  }
-  // .slide-menu__more-btn::before
-  &__more-btn::before {
-    content: "";
-    position: absolute;
-    left: -25px;
-    top: 6px;
-    background-image: url("../img/icon.svg");
-    background-size: 85%;
-    background-repeat: no-repeat;
-    height: 12px;
-    width: 11px;
-  }
   // .slide-menu__img
-
   &__img {
     // border: 1px solid green;
     box-sizing: border-box;
@@ -302,4 +266,44 @@ body {
       margin-left: 36px;
     }
   }
+}
+// .slide-menu__more-btn
+.more-btn {
+  position: relative;
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  margin: 10px 0 10px 35px;
+
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  text-decoration: none !important ;
+  color: $font-text !important ;
+  z-index: 10;
+
+// .slide-menu__more-btn:hover
+  &:hover {
+    text-decoration: underline !important ;
+    cursor: pointer;
+  }
+  &:hover::before {
+    filter: brightness(0.8);
+  }
+// .slide-menu__more-btn::before
+  &::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 6px;
+    background-image: url("../img/icon.svg");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 11px;
+  }
+  //todo перевернуть стрелку
 }
