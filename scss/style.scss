@@ -1,10 +1,10 @@
-@import "../fonts/_fonts";
-@import "_colors";
+@import "../fonts/fonts";
+@import "colors";
+@import "valiables";
 @import "../components/side-menu/scss/side-menu";
 @import "../components/services/scss/services";
-$sm: 500px;
-$md: 768px;
-$lg: 1119px;
+@import "../components/swiper/scss/swiper";
+
 
 body {
   font-family: "TT Lakes";
@@ -285,7 +285,7 @@ body {
   color: $font-text !important ;
   z-index: 10;
 
-// .slide-menu__more-btn:hover
+  // .slide-menu__more-btn:hover
   &:hover {
     text-decoration: underline !important ;
     cursor: pointer;
@@ -293,7 +293,7 @@ body {
   &:hover::before {
     filter: brightness(0.8);
   }
-// .slide-menu__more-btn::before
+  // .slide-menu__more-btn::before
   &::before {
     content: "";
     position: absolute;
@@ -306,4 +306,29 @@ body {
     width: 11px;
   }
   //todo перевернуть стрелку
+}
+// .article-title
+.article-title {
+  height: auto;
+  width: auto;
+  margin-left: -$margin;
+  background: linear-gradient(270deg, $bg-gray 0%, #ffffff 98.61%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  padding: 16px 0 16px 24px;
+
+  // .article-title__text
+  &__text {
+    margin: 0;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $font_gray;
+    margin-right: $margin;
+  }
+}
+
+.display-none {
+  display: none;
 }
