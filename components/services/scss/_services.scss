@@ -1,14 +1,11 @@
-
 .brends {
-  // height: 322px;
-  // width: 1121px;
-  max-width: 1120;
+  max-width: 1121;
   min-width: 320px;
   background: $bg-gray;
 
   // .brends__content
   &__content {
-    margin-left: $margin;
+    // margin-left: $margin;
   }
 
   //todo выровнять по правому краю
@@ -22,6 +19,11 @@
   // .brends__item
   &__item {
     list-style: none;
+    margin-right: 31px;
+    margin-top: 16px;
+    @media screen and (max-width: $lg) and (min-width: $sm) {
+      margin-right: 24px;
+    }
   }
   // .brends__item--hidden
   &__item--hidden {
@@ -32,16 +34,15 @@
 .brend-slide {
   display: flex;
   align-items: center;
-  list-style: none;
   height: 72px;
-  width: 224px;
+  width: 240px;
+  @media screen and (max-width: $lg) and (min-width: $sm) {
+    width: 224px;
+  }
   background: #ffffff;
   border: 1px solid #eaeaea;
   box-sizing: border-box;
   border-radius: 6px;
-  margin-right: $margin;
-  // margin: 0;
-  margin-top: 16px;
   padding-left: 16px;
 
   // brend-slide__item-box

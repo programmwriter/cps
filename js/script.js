@@ -1,11 +1,15 @@
 window.onload = function () {
   const brendsItems = document.querySelectorAll(".brends__item");
-  const brendsLastItems = document.querySelectorAll(
-    ".brends__item:nth-last-child(-n+3)"
+  const brendsItemsCount = brendsItems.length;
+  const brendsFirstSixItems = document.querySelectorAll(
+    ".brends__item:nth-child(-n+6)"
   );
 
   const brendsMoreBtn = document.querySelector(".brends__more-btn");
-
+  let brendsItemsDefault = 8;
+  const brendsLastItems = document.querySelectorAll(
+    `.brends__item:nth-last-child(-n+ ${brendsItemsCount - brendsItemsDefault})`
+  );
   brendsMoreBtn.addEventListener("click", function () {
     if (brendsMoreBtn.classList.contains("more-btn--open")) {
       brendsMoreBtn.classList.remove("more-btn--open");
@@ -35,9 +39,12 @@ window.onload = function () {
   if (window.innerWidth < 350) {
     brends.classList.add("display-none");
     brendsMobile.classList.remove("display-none");
-  } else {
+  } else if (window.innerWidth > 350 && window.innerWidth <= 768) {
+    brendsItemsDefault = 6;
+    console.log(brendsItemsDefault);
     brends.classList.remove("display-none");
     brendsMobile.classList.add("display-none");
   }
   console.log(window.innerWidth);
+  // console.log(brendsItemsCount);
 };

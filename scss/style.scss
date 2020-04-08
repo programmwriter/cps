@@ -12,6 +12,18 @@ body {
   background: #f2f2f2;
   margin: 0;
 }
+//box задает внешние отступы 
+.box{
+  margin-left: 32px;
+  @media screen and (max-width: $md) {
+    margin-left: 16px;
+  }
+  //planshet
+  @media screen and (max-width: $lg) and (min-width: $sm) {
+    margin-left: 24px;
+  }
+  
+}
 // .container
 .container {
   position: relative;
