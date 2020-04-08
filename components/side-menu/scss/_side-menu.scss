@@ -87,6 +87,10 @@
     text-decoration: none;
     color: $font-text;
   }
+  &__mail:hover,
+  &__tel:hover {
+    opacity: 0.6;
+  }
   // .contacts__mail
   &__mail {
     margin: 0;

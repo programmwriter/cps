@@ -115,6 +115,10 @@
   color: #1b1c21;
 }
 
+.contacts__mail:hover, .contacts__tel:hover {
+  opacity: 0.6;
+}
+
 .contacts__mail {
   margin: 0;
   font-size: 16px;
@@ -224,6 +228,10 @@
   .brend-slide {
     width: 224px;
   }
+}
+
+.brend-slide:hover .brend-slide__img-link, .brend-slide:hover .brend-slide__btn-box {
+  opacity: 0.5;
 }
 
 .brend-slide__btn-box {
@@ -409,17 +417,17 @@ body {
           filter: brightness(0.8);
 }
 
-.contact-icons {
+.icons-set {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact-icons__icon {
+.icons-set__icon {
   margin-right: 16px;
 }
 
-.contact-icons__icon:last-child {
+.icons-set__icon:last-child {
   margin-right: 0;
 }
 
@@ -658,6 +666,7 @@ body {
   font: inherit;
   background-color: transparent;
   margin: 10px 0 10px 35px;
+  outline: none;
   display: block;
   font-size: 16px;
   line-height: 24px;

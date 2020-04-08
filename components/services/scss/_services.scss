@@ -50,6 +50,9 @@
   border-radius: 6px;
   padding-left: 16px;
 
+  &:hover &__img-link, &:hover &__btn-box{
+    opacity: 0.5;
+  }
   // brend-slide__item-box
   &__btn-box {
     display: flex;
