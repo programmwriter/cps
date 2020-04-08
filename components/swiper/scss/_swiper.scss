@@ -1,14 +1,13 @@
 .brends-mobile {
-  // max-width: 1120;
-  // min-width: 320px;
   width: 320px;
   background: $bg-gray;
   margin-bottom: 16px;
   overflow: hidden;
+
   // .brends-mobile__content
-  &__content {
-    margin-left: $margin;
-  }
+  // &__content {
+  //   margin-left: $margin;
+  // }
 }
 
 .swiper-container {
@@ -19,6 +18,8 @@
 }
 .swiper-slide {
   width: 240px !important;
+  margin-top: 16px;
+  margin-right: 16px;
 }
 .swiper-pagination-bullet {
   width: 12px !important;

@@ -5,16 +5,16 @@
 @import "../components/services/scss/services";
 @import "../components/swiper/scss/swiper";
 
-
 body {
   font-family: "TT Lakes";
   color: #1b1c21;
   background: #f2f2f2;
   margin: 0;
 }
-//box задает внешние отступы 
-.box{
+//box задает внешние отступы
+.box {
   margin-left: 32px;
+
   @media screen and (max-width: $md) {
     margin-left: 16px;
   }
@@ -104,7 +104,6 @@ body {
     display: none;
   }
 }
-
 //btn-link
 .btn-link {
   display: flex;
@@ -279,7 +278,7 @@ body {
     }
   }
 }
-// .slide-menu__more-btn
+// more-btn
 .more-btn {
   position: relative;
   padding: 0;
@@ -297,7 +296,7 @@ body {
   color: $font-text !important ;
   z-index: 10;
 
-  // .slide-menu__more-btn:hover
+  // more-btn:hover
   &:hover {
     text-decoration: underline !important ;
     cursor: pointer;
@@ -305,7 +304,7 @@ body {
   &:hover::before {
     filter: brightness(0.8);
   }
-  // .slide-menu__more-btn::before
+  // more-btn::before
   &::before {
     content: "";
     position: absolute;
@@ -317,12 +316,16 @@ body {
     height: 12px;
     width: 11px;
   }
-  //todo перевернуть стрелку
+  // more-btn--open::before
+  &--open::before{
+    background-image: url("../img/iconUp.svg");
+  }
 }
 // .article-title
 .article-title {
   height: auto;
   width: auto;
+  //todo поменять отступы
   margin-left: -$margin;
   background: linear-gradient(270deg, $bg-gray 0%, #ffffff 98.61%);
   transform: matrix(-1, 0, 0, 1, 0, 0);
